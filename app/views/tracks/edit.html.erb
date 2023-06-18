@@ -1,0 +1,16 @@
+<h1>Edit Track</h1>
+<%= form_with(model: @track, url: track_path(@track), method: :patch) do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+  <div>
+    <%= form.submit 'Update Track' %>
+  </div>
+<% end %>
+<br>
+<%= link_to 'Back', tracks_path %>
